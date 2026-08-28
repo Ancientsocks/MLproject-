@@ -9,7 +9,7 @@ def get_requirements(file_path:str)->List[str]:
 
     ...
     requirments = []
-    with open(requirements.txt) as file_obj:
+    with open(file_path) as file_obj:
         requirements = file_obj.readlines()
         requirements = [req.replace("\n","") for req in requirements]
 
@@ -23,4 +23,4 @@ setup(
     packages = find_packages(),
     install_requires= get_requirements('requirements.txt')
 
-)
+)  
